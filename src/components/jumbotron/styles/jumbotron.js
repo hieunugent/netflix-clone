@@ -1,33 +1,31 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
 export const Item = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
   padding: 50px 5%;
   color: white;
-  overflow:hidden; 
-
+  overflow: hidden;
 `;
 export const Inner = styled.div`
   display: flex;
   align-items: center;
-  flex-direction:${({direction})=> direction} ;
+  flex-direction: ${({ direction }) => direction};
   justify-content: space-between;
   max-width: 1100px;
-  margin:auto;
-  width:100%;
+  margin: auto;
+  width: 100%;
 
-  @media (max-width: 1000px){
-      flex-direction: column;
-
-  };
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  } ;
 `;
 export const Pane = styled.div`
   width: 50%;
   @media (max-width: 1000px) {
-    width:100%;
+    width: 100%;
     padding: 0 45px;
-    text-align:center;
+    text-align: center;
   }
 `;
 export const Title = styled.h1`
@@ -41,13 +39,17 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2``;
 export const Image = styled.img`
-max-width:100%;
-height:auto;
-@media (max-width:600px){
-  font-size:18px;
-}
+  max-width: 100%;
+  height: auto;
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
-
-
-export const Container = styled.div``;
+export const Container = styled.div`
+@media (max-width:1000px){
+  ${Item}:last-of-type h2{
+    margin-bottom:50px
+  }
+}
+`;

@@ -2,8 +2,8 @@ import React from "react";
 import { Container,Inner ,Item,  Pane, Title, SubTitle, Image} from "./styles/Jumbotron";
 export default function Jumbotron({children, direction='row',...resProps}) {
   return (
-    <Item direction={direction}>
-      <Inner>{children}</Inner>
+    <Item {...resProps}>
+      <Inner direction={direction}>{children}</Inner>
     </Item>
   );
 }
